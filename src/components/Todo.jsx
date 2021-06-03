@@ -9,7 +9,6 @@ const Todo = (props) => {
     const inputRef = useRef(null);
     const { list } = props;
     const [input, setInput] = useState();
-    console.log(props);
     useLayoutEffect(() => {
         inputRef.current.focus();
     }, []);
