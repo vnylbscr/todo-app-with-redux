@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    list-style: none;
+    border: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input-element {
+    height: 50px;
+    width: 400px;
+    margin: 40px;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.7em;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title {
+    text-align: center;
+    font-size: 40px;
+    color: rebeccapurple;
+    margin-top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+    color: #fff;
+    font-size: 30px;
+    border-radius: 4px;
+    margin: 10px auto;
+    transition: all 1s;
+}
+
+.not-active {
+    color: rgb(143, 140, 140);
+    font-size: 30px;
+    border-radius: 4px;
+    margin: 10px auto;
+    transition: all 1s;
+    text-decoration: line-through;
+}
+
+.active, .not-active:hover {
+    cursor: pointer;
+}
+
+.btn-add {
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    border-bottom: 1px solid rebeccapurple;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: rebeccapurple;
+    text-align: center;
+    transition: all 1s;
+}
+
+.btn-add:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    cursor: pointer;
+}
+
+.list-container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: auto;
+    min-width: 0;
+}
+
+.icon {
+    font-size: 30px;
+    margin-left: 2em;
+    color: #fff;
+    transition: color 1sn;
+}
+
+.icon:hover .tooltip {
+    visibility: visible;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: orangered;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+}
+
+.icon:hover {
+    color: rebeccapurple;
+    cursor: pointer;
 }
