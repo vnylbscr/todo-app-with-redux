@@ -31,6 +31,7 @@ const Todo = () => {
           type="text"
           ref={inputRef}
           placeholder="Add new task"
+          name="input"
           
         />
         {input && (
