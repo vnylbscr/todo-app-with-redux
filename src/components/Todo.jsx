@@ -1,19 +1,29 @@
 import React, { useRef, useState, useLayoutEffect } from "react";
 import TodoList from "./TodoList";
-import { useDispatch } from "react-redux";
+import {useDispatch}  from "react-redux";
 import { addTodoList } from "../actions";
+import Merhaba from "./Merhaba"
 const Todo = () => {
   const inputRef = useRef(null);
   const [input, setInput] = useState();
-  const dispatch = useDispatch();
+  const [state, setState] = useState({
+    mail:'',
+    password:'',
+    confitPass:null
+  })
 
+
+  
+  
+  const dispatch = useDispatch();
   useLayoutEffect(() => {
     inputRef.current.focus();
   }, []);
+  
   return (
-    <div className="container">
+    <div className='container'>
       <h1 className="header-title">+ Todos App with Redux</h1>
-      <div className="input-area">
+      <div className="input-area" >
         <input
           onChange={(e) => setInput(e.target.value)}
           className="input-element"
@@ -21,6 +31,7 @@ const Todo = () => {
           type="text"
           ref={inputRef}
           placeholder="Add new task"
+          
         />
         {input && (
           <button
@@ -34,8 +45,13 @@ const Todo = () => {
           </button>
         )}
       </div>
+      <Merhaba name="Ömer" value="mert">
+      </Merhaba>
       <TodoList />
     </div>
   );
 };
 export default Todo;
+
+const width = useTime();
+

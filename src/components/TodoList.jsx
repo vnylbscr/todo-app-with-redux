@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { completedToItemFromToDoList, removeTodoList } from "../actions/index";
 const TodoList = () => {
   const list = useSelector((state) => state.todoList);
+  // const [state, setstate] = useState(initialState);
   const dispatch = useDispatch();
   console.log(dispatch);
   return (
